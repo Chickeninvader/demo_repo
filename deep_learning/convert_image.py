@@ -54,21 +54,13 @@ def show_image(index, array_of_image):
     image = array_to_img(image)
     image.show()
 
-# Take 
+# Training
 dog_cat_train, outcome = convert_image(cat_link, dog_link)
-
-print(outcome.shape)
-
-
-
 parameters = brain(X=dog_cat_train, Y=outcome, iteration=20, learning_rate=5)
 
+# Predict
 dog_cat_test, outcome = convert_image(test_cat, test_dog)
-
-   
 A2, cache = forward(X= dog_cat_test, parameters=parameters)
-
-
 print(check_result(A2, Y=outcome))
 
 
