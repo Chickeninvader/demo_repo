@@ -2,7 +2,15 @@ import numpy as np
 from activate_and_derivative import sigmoid,tanh
 
 def forward(X, parameters):
-    n_x = X.shape[0]
+    """
+    Argument:
+    X -- input data of size (n_x, m)
+    parameters -- python dictionary containing your parameters (output of initialization function)
+    
+    Returns:
+    A2 -- The sigmoid output of the second activation (machine prediction)
+    cache -- a dictionary containing "Z1", "A1", "Z2" and "A2"
+    """
     
     W1 = parameters["W1"]
     b1 = parameters["b1"]

@@ -3,8 +3,17 @@ import numpy as np
 from activate_and_derivative import derivative_tanh
 
 def back_propagation(parameters, cache, X, Y):
+    """
+    Arguments:
+    parameters -- python dictionary containing our parameters 
+    cache -- a dictionary containing "Z1", "A1", "Z2" and "A2".
+    X -- input data of shape (2, number of examples)
+    Y -- "true" labels vector of shape (1, number of examples)
+    
+    Returns:
+    grads -- python dictionary containing your gradients with respect to different parameters
+    """
     m = X.shape[1]
-    n_x = X.shape[0]
 
     W1 = parameters["W1"]
     W2 = parameters["W2"]

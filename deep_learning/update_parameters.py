@@ -1,6 +1,17 @@
 import copy
 
 def update_parameters(parameters, grads, learning_rate):
+    """
+    Updates parameters using the gradient descent update rule given above
+    
+    Arguments:
+    parameters -- python dictionary containing your parameters 
+    grads -- python dictionary containing your gradients 
+    learning_rate -- the "machine learning's speed"
+
+    Returns:
+    parameters -- python dictionary containing your updated parameters 
+    """
 
     W1 = copy.deepcopy(parameters)["W1"]
     b1 = parameters["b1"]
